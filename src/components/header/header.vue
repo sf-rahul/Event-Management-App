@@ -12,9 +12,7 @@
          <li>
         <router-link to="/events"> Events  </router-link>
            </li>
-           <li>
-        <router-link to="/register"> Register   </router-link>
-           </li>
+          
           <li>
         <router-link to="/signup"> Signup   </router-link>
            </li>

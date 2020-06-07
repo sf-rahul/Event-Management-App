@@ -1,11 +1,12 @@
+
 <template>
   <div class = "container"> 
       
   <v-container class="grey lighten-5">
     <v-row no-gutters>
       <v-col
-        v-for="n in 3"
-        :key="n"
+        v-for="event in events"
+        :key="event.eventId"
         cols="12"
         sm="4"
       >
@@ -14,44 +15,7 @@
           outlined
           tile
         >
-          <template>
-  <v-card
-    class="mx-auto"
-    max-width="400"
-  >
-    <v-img
-      class="white--text align-end"
-      height="200px"
-      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-    >
-      <v-card-title>Top 10 Australian beaches</v-card-title>
-    </v-img>
-
-    <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>
-
-    <v-card-text class="text--primary">
-      <div>Whitehaven Beach</div>
-
-      <div>Whitsunday Island, Whitsunday Islands</div>
-    </v-card-text>
-
-    <v-card-actions>
-      <v-btn
-        color="orange"
-        text
-      >
-        Share
-      </v-btn>
-
-      <v-btn
-        color="orange"
-        text
-      >
-        Register
-      </v-btn>
-    </v-card-actions>
-  </v-card>
-</template>
+          <eventdetail v-bind:event="event"/>
         </v-card>
       </v-col>
     </v-row>
@@ -61,44 +25,54 @@
 </template>
 
 <script>
+/* eslint-disable no-unused-vars */
+import eventdetail from './eventdetail'
 export default {
-  
+
+  components:{
+    eventdetail
+  }
+  ,
   data(){
 
       return {
           
          events: [ {
-           eventId:'abc',
-           name:'Singing',
+           eventId:'1',
+           name:' एक शाम कुमार राहुल (अवध) के नाम ',
            type:'offline',
-           venue:'kankarbagh',
+           price:[300,400,500],
+           venue:'Banerghatta ,Banglore',
            date: { 
                 from:'6/6/2020',
                 to:'6/6/2020'
              }},
              {
-           eventId:'abc',
-           name:'Singing',
+           eventId:'2',
+           name:'गलिब की गजले.',
            type:'offline',
-           venue:'kankarbagh',
+           price:[300,400,500],
+           venue:'Vishrant vadi , Pune ',
            date: { 
                 from:'6/6/2020',
                 to:'6/6/2020'
              }} ,
              {
-           eventId:'abc',
-           name:'Singing',
+           eventId:'3',
+           name:'Show your moves. A dance festival.',
            type:'offline',
-           venue:'kankarbagh',
+           price:[300,400,500],
+           venue:'Whitefiled , Banglore.',
            date: { 
                 from:'6/6/2020',
                 to:'6/6/2020'
              }} ,
              {
-           eventId:'abc',
-           name:'Singing',
+           eventId:'4',
+           name:'Paint exhibition.',
            type:'offline',
-           venue:'kankarbagh',
+           price:[300,400,500],
+           venue:'Marathalli, Banglore.',
            date: { 
                 from:'6/6/2020',
                 to:'6/6/2020'
