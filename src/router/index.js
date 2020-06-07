@@ -25,8 +25,9 @@ Vue.use(VueRouter)
   },
   {
      
-     path:'/register',
+     path:'/register/:eventId',
      name:'register',
+     props:true,
      component: register
 
   },

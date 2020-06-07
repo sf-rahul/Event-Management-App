@@ -16,7 +16,7 @@
           >
             <v-card class="elevation-12">
               <v-toolbar
-                color="#571275"
+                
                 dark
                 flat
               >

@@ -3,7 +3,7 @@
     
     <v-content>
       <mainpage/>
-      <router-view></router-view>
+     
     </v-content>
   </v-app>
 </template>

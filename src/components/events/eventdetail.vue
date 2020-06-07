@@ -34,7 +34,7 @@
       <v-btn
         color="orange"
         text
-        to="/register"
+        v-bind:to="{ name: 'register', params: { eventId:event.eventId } }"
       >
         Register
       </v-btn>

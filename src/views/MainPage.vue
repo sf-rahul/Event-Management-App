@@ -1,3 +1,4 @@
+
 <template>
    <div >
 
@@ -10,12 +11,14 @@
 </template>
 
 <script>
+/* eslint-disable no-unused-vars */
 import header from '../components/header/header'
+import toolbarHeader from '../components/header/toolbarHeader'
 
 export default {
     name:"mainpage",
     components:{
-        pageHeader:header
+        pageHeader:toolbarHeader
     }
 
 }

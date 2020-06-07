@@ -44,6 +44,7 @@
 <script>
 export default {
     name:"register",
+    props:['eventId'],
     data(){
         
         return {
@@ -62,11 +63,18 @@ export default {
 
             console.log(event.target.value)
         }
+    },
+    created(){
+        console.log(this.eventId);
     }
 }
 </script>
 
 <style scoped>
+.register{
+
+     background-color: #eee;
+}
 
 .register-form{
 
@@ -75,6 +83,7 @@ export default {
      border : 1px solid #eee;
      padding:20px;
      box-shadow: 0 2px 3px #ccc;
+    
 
   }
 
